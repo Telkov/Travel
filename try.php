@@ -20,7 +20,7 @@
 
     <div class="btn-group show-tick" style="margin-left:20px;">;
         <form name="form">
-            <select multiple class="selectpicker sel1" name="showcity" data-max-options="3" onchange="test(this.value)"  >
+            <select multiple class="selectpicker sel1" name="showcity" data-max-options="3" onchange="ShowCity(this.value)"  >
                 <?php
                 connect();
                 $res=mysql_query('select * from Countries');
@@ -31,12 +31,12 @@
             </select>
         </form>
     </div>;
-    <div class="btn-group show-tick" style="margin-left:20px;">;
-        <select multiple class="form-control sel1" name="ciid" id="ciid">;
-        </select>;
+    <div id = "ciid" class="btn-group show-tick" style="margin-left:20px;">;
+<!--        <select multiple class="form-control sel1" name="ciid" id="ciid">;-->
+<!--        </select>;-->
     </div>;
     <script>
-        function test() {
+        function ShowCity() {
             var form = document.forms[0];
             var select = form.elements.showcity;
             var coidarray = new Array();
@@ -60,6 +60,8 @@
                 ao.onreadystatechange = function () {
                     if (ao.readyState == 4 && ao.status == 200) {
                         document.getElementById('ciid').innerHTML = ao.responseText;
+//                        alert(ao.responseText);
+//                        document.write(ao.responseText);
                     }
                 }
                 ao.open('GET', 'pages/ajax1.php?coid=' + coidarray);
