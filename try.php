@@ -9,7 +9,7 @@
     <!-- Bootstrap -->
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
     <link href="CSS/bootstrap-select.min.css" rel="stylesheet">
-    <link href="CSS/style.css" rel="stylesheet">
+    <!-- <link href="CSS/style.css" rel="stylesheet"> -->
 </head>
 <body>
 <?php include_once('pages/functions.php'); ?>
@@ -33,8 +33,10 @@
     echo '</form>';
     echo '</div>';
     echo '<div class="btn-group show-tick" style="margin-left:20px;">';
-    echo '<select multiple class="form-control sel1" name="ciid" id="ciid">';
+    echo '<select multiple class="selectpicker sel1" name="ciid" id="ciid">';
     echo '</select>';
+    // echo '<div id="ciid">';
+    // echo '</div>';
     echo '</div>';
 
     ?>
@@ -73,6 +75,9 @@
             }
         }
     </script>
+
+
+
 </body>
 </html>
 

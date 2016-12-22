@@ -23,7 +23,7 @@
         $selcoid='select * from Countries where id='.$coidarr[$i];
         $rescoid=mysql_query($selcoid);
         $rowcoid=mysql_fetch_array($rescoid,MYSQL_NUM);
-        var_dump($rowcoid);
+        // var_dump($rowcoid);
 //        echo '<optgroup label="'.$rowcoid[1].'" data-max-options="2">';
 
         $sel='select*from Cities where countryid='.$coidarr[$i];
