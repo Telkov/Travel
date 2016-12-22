@@ -19,7 +19,7 @@
 <div class="bs-docs-example">
 <?php
     echo '<div class="btn-group show-tick" style="margin-left:20px;">';
-    echo '<form name="form">';
+    echo '<form name="formcoid">';
     echo '<select multiple class="selectpicker sel1" name="showcity" data-max-options="3" onchange="ShowCity(this.value)">';
     // <?php
     connect();
@@ -41,7 +41,7 @@
 
     <script>
         function ShowCity() {
-            var form = document.forms[0];
+            var form = document.forms.formcoid;
             var select = form.elements.showcity;
             var coidarray = new Array();
             for (var i = 0; i < select.options.length; i++) {
