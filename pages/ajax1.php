@@ -28,7 +28,7 @@
 
         $sel='select*from Cities where countryid='.$coidarr[$i];
         $res=mysql_query($sel);
-        echo '<ul>';
+        // echo '<ul>';
         while ($row=mysql_fetch_array($res,MYSQL_NUM)) {
 
             echo '<option value="'.$row[0].'">'.$row[1].'</option>';

@@ -17,24 +17,28 @@
 <!--echo '<select name="coid" id="coid" value="" multiple class="selectpicker sel1" data-selected-text-format="count" data-max-options="3" onchange="showCities(this.value)">';-->
 
 <div class="bs-docs-example">
+<?php
+    echo '<div class="btn-group show-tick" style="margin-left:20px;">';
+    echo '<form name="form">';
+    echo '<select multiple class="selectpicker sel1" name="showcity" data-max-options="3" onchange="ShowCity(this.value)">';
+    // <?php
+    connect();
+    $res=mysql_query('select * from Countries');
+    while($row=mysql_fetch_array($res,MYSQL_NUM)) {
+        echo '<option value="' . $row[0] . '">' . $row[1] . '</option>';
+    }
+    
+    //? >
+    echo '</select>';
+    echo '</form>';
+    echo '</div>';
+    echo '<div class="btn-group show-tick" style="margin-left:20px;">';
+    echo '<select multiple class="form-control sel1" name="ciid" id="ciid">';
+    echo '</select>';
+    echo '</div>';
 
-    <div class="btn-group show-tick" style="margin-left:20px;">;
-        <form name="form">
-            <select multiple class="selectpicker sel1" name="showcity" data-max-options="3" onchange="ShowCity(this.value)"  >
-                <?php
-                connect();
-                $res=mysql_query('select * from Countries');
-                while($row=mysql_fetch_array($res,MYSQL_NUM)) {
-                    echo '<option value="' . $row[0] . '">' . $row[1] . '</option>';
-                }
-                ?>
-            </select>
-        </form>
-    </div>;
-    <div id = "ciid" class="btn-group show-tick" style="margin-left:20px;">;
-<!--        <select multiple class="form-control sel1" name="ciid" id="ciid">;-->
-<!--        </select>;-->
-    </div>;
+    ?>
+
     <script>
         function ShowCity() {
             var form = document.forms[0];
