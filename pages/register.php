@@ -2,7 +2,7 @@
             if(!isset($_POST['reg']))
             {
                 ?>
-                <div class="container">
+                <div class="container" style="margin-top: 20px;">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" >
                             <form action='index.php?page=5' method='post'>

@@ -28,7 +28,7 @@
 		default charset="utf8"';
 
     $ct7='create table Comments(id int not null auto_increment primary key, userid int, foreign key(userid) references Users(id), hotelid int,
-        foreign key(hotelid) references Hotels(id),
+        foreign key(hotelid) references Hotels(id), login varchar(32), foreign key(login) references Users(login),
         text varchar(1024) not null, datein datetime) default charset=utf8';
 
 	connect();

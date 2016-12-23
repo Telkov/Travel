@@ -37,6 +37,6 @@
             ao.send(null);
         }
     </script>
-
+    <a href="pages/hotelinfo.php?hid=31" target="_blank">Click</a>
 </div>
 <!--END-->

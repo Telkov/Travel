@@ -33,7 +33,7 @@
     echo '</form>';
     echo '</div>';
     echo '<div class="btn-group show-tick" style="margin-left:20px;">';
-    echo '<select multiple class="form-control sel1" name="ciid" id="ciid">';
+    echo '<select multiple class="selectpicker sel1" name="ciid" id="ciid">';
     echo '</select>';
     echo '</div>';
 
@@ -73,7 +73,10 @@
             }
         }
     </script>
+</div>
+    <div class="tryback" style="margin-top: 50px">
+        <img src="images/x7ByqRDKcOw.jpg" alt="tryimage">
+    </div>
 </body>
 </html>
-
 

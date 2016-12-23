@@ -1,5 +1,5 @@
 <?php session_start();
-error_reporting( E_ERROR ); //скрывает Notice и Warning
+//error_reporting( E_ERROR ); //скрывает Notice и Warning
  ?>
 
 <!DOCTYPE html>
@@ -35,7 +35,8 @@ error_reporting( E_ERROR ); //скрывает Notice и Warning
         </div>
         <!--        NAVBAR START-->
         <?php
-        include_once('pages/navbar.php')
+        include_once('pages/navbar.php');
+        include_once('pages/footer.php');
         ?>
 <!--        NAVBAR END-->
         <?php

@@ -7,6 +7,11 @@ body{
   color: #353535;
   /*background: #aaa;*/
 }
+.content{
+  position:static;
+  z-index: -50;
+}
+
 
 a{
   text-decoration: none;
@@ -14,7 +19,6 @@ a{
 
 .main{
   max-width: 500px;
-  margin: 50px 50px;
 }
 
 /*Стрелочки начало*/
@@ -45,6 +49,7 @@ a{
   margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
+
 }
 
 .sl__slide img{
