@@ -36,13 +36,14 @@
         <!--        NAVBAR START-->
         <?php
         include_once('pages/navbar.php');
-        include_once('pages/footer.php');
+
         ?>
 <!--        NAVBAR END-->
         <?php
 
         include_once('pages/menu.php');
         include_once('pages/modal.php');
+        include_once('pages/content.php')
         ?>
 
     </div>
@@ -52,7 +53,13 @@
          </div>
      </div>
  </div>
-
+ <div class="container-fluid bottom">
+     <div class="container-fluid background2">
+     </div>
+     <?php
+     include_once('pages/footer.php');
+     ?>
+ </div>
 <!--</div>-->
 
   </body>

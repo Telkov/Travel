@@ -1,4 +1,4 @@
-<div class="container" style="margin-left:10px;z-index: 999">
+<div class="container" style="margin-left:10px;">
     <form action="index.php?page=2" class="form" method="post" style="margin-top: 20px">
         <select name="hid" class="form-control" style="width:auto" title="">
             <?php

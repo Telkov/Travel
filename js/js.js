@@ -1,5 +1,6 @@
 $('.sl').slick({
 	fade: true,
+    adaptiveHeight: false,
 });
 
 $('.sl2').slick({

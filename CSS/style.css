@@ -13,8 +13,8 @@ body {
 
 .jumbofooter
 	{
-	  position: relative;
-	  bottom: 0;
+	  position: absolute;
+	  bottom: 0px;
 	  padding-top: 0px;
 	  padding-bottom: 0px;
 	  margin-bottom: 0px;
@@ -56,7 +56,7 @@ body {
 	 	color: white;
 	}
 .content{
-	height: auto;
+	height: 100%;
 	/*background: url("../images/fon-111.jpg") no-repeat top left fixed;*/
 	background-color: white;
 	background-size: cover;
@@ -84,6 +84,10 @@ body {
 .container-fluid.top{
 	margin-top: -20px;
 	height: 18px;
+}
+.container-fluid.bottom{
+	position: relative;
+	height: auto;
 }
 .navbar-brand-search
 	{
@@ -328,3 +332,22 @@ textarea.form-control.inp1 {
 	margin-left: 20px;
 	max-width: 200px;
 }
+.h3contacts{
+	color: #0054fe;
+	font: Tahoma;
+}
+.contacts__img {
+	height: 200px;
+	position: absolute;
+	bottom: 4%;
+	background-image: url("../images/contactus-banner.jpg");
+	background-size: cover;
+	max-height: 200px;
+	width: 94%;
+	margin: 0 3%;
+}
+
+
+	
+
+
