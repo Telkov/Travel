@@ -334,7 +334,7 @@ textarea.form-control.inp1 {
 }
 .h3contacts{
 	color: #0054fe;
-	font: Tahoma;
+    font-family: Tahoma;
 }
 .contacts__img {
 	height: 200px;
