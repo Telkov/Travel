@@ -346,6 +346,16 @@ textarea.form-control.inp1 {
 	width: 94%;
 	margin: 0 3%;
 }
+.welcome__img {
+	background-image: url("../images/welcome.gif");
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 999;
+	height: 100%;
+	/*height: 100%;*/
+	width: 94%;
+	margin: 0 3%;
+}
 
 
 	

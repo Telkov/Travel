@@ -1,5 +1,5 @@
 <?php session_start();
-//error_reporting( E_ERROR ); //скрывает Notice и Warning
+error_reporting( E_ERROR ); //скрывает Notice и Warning
  ?>
 
 <!DOCTYPE html>

@@ -34,7 +34,7 @@
                                     <input type='text' name='email' class='form-control' size='10' placeholder='E-mail' />
                                     <!--      </div>-->
                                 </div>
-                                <input type='Submit' name='reg' value='Register' class='btn btn-primary' />
+                                <input type='Submit' name='reg' value='Register' class='btn btn-primary btn-gradient' />
                             </form>
                         </div>
                     </div>
