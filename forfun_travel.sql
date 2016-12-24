@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 17 2016 г., 12:30
+-- Время создания: Дек 24 2016 г., 12:58
 -- Версия сервера: 5.5.48
 -- Версия PHP: 5.3.29
 
@@ -77,9 +77,19 @@ CREATE TABLE IF NOT EXISTS `Comments` (
   `id` int(11) NOT NULL,
   `userid` int(11) DEFAULT NULL,
   `hotelid` int(11) DEFAULT NULL,
+  `login` varchar(32) DEFAULT NULL,
   `text` varchar(1024) NOT NULL,
   `datein` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `Comments`
+--
+
+INSERT INTO `Comments` (`id`, `userid`, `hotelid`, `login`, `text`, `datein`) VALUES
+(2, 4, 2, 'user1', 'Very nice hotel!', '2016-12-23 22:48:07'),
+(3, 1, 2, 'admin', 'Thank You for comment!', '2016-12-24 00:33:36'),
+(4, 1, 31, 'admin', 'n1. I like Kemer and Zena!', '2016-12-24 00:49:00');
 
 -- --------------------------------------------------------
 
@@ -395,7 +405,7 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `email` varchar(128) DEFAULT NULL,
   `avatar` mediumblob,
   `roleid` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `Users`
@@ -403,8 +413,8 @@ CREATE TABLE IF NOT EXISTS `Users` (
 
 INSERT INTO `Users` (`id`, `login`, `pass`, `email`, `avatar`, `roleid`) VALUES
 (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'admin', NULL, 1),
-(2, 'user1', '202cb962ac59075b964b07152d234b70', 'user1', NULL, 2),
-(3, 'user2', 'e10adc3949ba59abbe56e057f20f883e', 'user2', NULL, 2);
+(4, 'user1', '698d51a19d8a121ce581499d7b701668', '111', NULL, 2),
+(5, 'user2', 'bcbe3365e6ac95ea2c0343a2395834dd', '222', NULL, 2);
 
 --
 -- Индексы сохранённых таблиц
@@ -424,7 +434,8 @@ ALTER TABLE `Cities`
 ALTER TABLE `Comments`
   ADD PRIMARY KEY (`id`),
   ADD KEY `userid` (`userid`),
-  ADD KEY `hotelid` (`hotelid`);
+  ADD KEY `hotelid` (`hotelid`),
+  ADD KEY `login` (`login`);
 
 --
 -- Индексы таблицы `Countries`
@@ -476,7 +487,7 @@ ALTER TABLE `Cities`
 -- AUTO_INCREMENT для таблицы `Comments`
 --
 ALTER TABLE `Comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `Countries`
 --
@@ -501,7 +512,7 @@ ALTER TABLE `Roles`
 -- AUTO_INCREMENT для таблицы `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
@@ -517,7 +528,8 @@ ALTER TABLE `Cities`
 --
 ALTER TABLE `Comments`
   ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `Users` (`id`),
-  ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`hotelid`) REFERENCES `Hotels` (`id`);
+  ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`hotelid`) REFERENCES `Hotels` (`id`),
+  ADD CONSTRAINT `comments_ibfk_3` FOREIGN KEY (`login`) REFERENCES `Users` (`login`);
 
 --
 -- Ограничения внешнего ключа таблицы `Hotels`
