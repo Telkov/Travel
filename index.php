@@ -43,7 +43,7 @@
 
         include_once('pages/menu.php');
         include_once('pages/modal.php');
-        include_once('pages/content.php')
+
         ?>
 
     </div>
